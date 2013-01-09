@@ -1,0 +1,51 @@
+<html>
+<head>
+
+    <style>
+        #book{
+            width:600px;
+            height:300px;
+        }
+        #book .turn-page{
+            width:300px;
+            height:300px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="turn.min.js"></script>
+    <script>
+        $(function(){
+            $("#book").turn();
+            $("#previous, #next").click(function()
+            {
+                $("#book").turn($(this).text());
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div align="center">
+    <h1>turn.js</h1>
+    <h3>The awesome paper-like effect made for HTML5</h3>
+    <button id="previous">previous</button>
+    <button id="next">next</button>
+    <hr/>
+    <div id='book'>
+        <img src="images/1.jpg"/>
+        <img src="images/2.jpg"/>
+        <img src="images/3.jpg"/>
+        <img src="images/4.jpg"/>
+        <img src="images/5.jpg"/>
+        <img src="images/6.jpg"/>
+        <img src="images/7.jpg"/>
+        <img src="images/8.jpg"/>
+        <div style="background: gray;">abc xyz</div>
+        <div style="background: gray;">asdf</div>
+        <div>zxcv</div>
+    </div>
+    <hr/>
+
+</div>
+</body>
+</html>
